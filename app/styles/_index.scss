@@ -25,30 +25,6 @@
       color: rgb(37, 37, 63);
       .title {
       }
-      ul {
-        list-style: none;
-        margin-left: 100px;
-        margin-top: 0;
-        p {
-          margin-bottom: 14px;
-          margin-top: 0;
-        }
-        li {
-          margin-bottom: 14px;
-          margin-left: 21px;
-          &:before {
-            position: absolute;
-            display: block;
-            content: '';
-            background: #3eb730;
-            width: 11px;
-            height: 11px;
-            border-radius: 11px;
-            margin-left: -21px;
-            margin-top: 8px;
-          }
-        }
-      }
       .btn {
         width: 235px;
         height: 40px;
@@ -73,6 +49,31 @@
           background: #248a18;
         }
       }
+    }
+  }
+}
+
+.green-dot {
+  list-style: none;
+  margin-left: 100px;
+  margin-top: 0;
+  p {
+    margin-bottom: 14px;
+    margin-top: 0;
+  }
+  li {
+    margin-bottom: 14px;
+    margin-left: 21px;
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      background: #3eb730;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
+      margin-left: -21px;
+      margin-top: 8px;
     }
   }
 }
@@ -137,6 +138,8 @@
   width: 100%;
   background-position: center -200px;
   background-repeat: no-repeat;
+  padding: 1px 0;
+
   .wrapper {
     width: 990px;
     margin: 0 auto;
