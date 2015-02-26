@@ -4,6 +4,19 @@ html, body {
   position: relative;
 }
 
+body {
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+body.about {
+    background-image: url(../images/background_about.png);
+}
+
+body.index {
+    background-image: url(../images/background_index.png);
+}
+
 .clrfx {
   clear: both;
 }

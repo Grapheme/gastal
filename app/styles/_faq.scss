@@ -10,11 +10,17 @@
         margin-left: -100px;
     }
 }
+
 .faq-block {
     font-family: 'helios';
     margin: 0 auto;
     font-size: 0;
     width: 930px;
+
+    &.faq-page {
+        margin-top: 25px;
+        margin-bottom: 38px;
+    }
 
     .faq-left {
         display: inline-block;
@@ -41,7 +47,7 @@
         }
 
         .faq-product-image {
-            margin-top: 30px;
+            margin-top: 38px;
 
             img {
                 margin-left: -48px;
@@ -64,7 +70,7 @@
         }
 
         .faq-list {
-            margin: 20px 0 0;
+            margin: 13px 0 0;
             padding: 0;
             list-style: none;
 

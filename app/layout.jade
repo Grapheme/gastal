@@ -1,8 +1,14 @@
 doctype html
 html.no-js
+
+  - var title = "Гастал"
+  - var body = "about"
+  - var active = "";
+  block vars
+  
   head
     meta(charset='utf-8')
-    title Гастал
+    title #{title}
     meta(name='description' content='')
     // Place favicon.ico and apple-touch-icon.png in the root directory
 
@@ -19,9 +25,21 @@ html.no-js
     script(src='../bower_components/modernizr/modernizr.js')
     // endbuild
 
-  body
+  #main-menu
+    .wrapper
+      a.logo(href="index.html")
+        img(src="images/logo-gastal-210.png")
+      .holder
+        - var menu_obj = [{"n": "О гастале", "l": "about"},{"n": "Статьи", "l": "#"},{"n": "FAQ", "l": "faq"},{"n": "Контакты", "l": "contacts"}]
+        each option in menu_obj
+          a(href="#{option.l}.html" class = active == option.l ? "active":"") #{option.n}
+            - if(option.l == 'about')
+              | <sup>®</sup>
+      .clrfx
+  body(class="#{body}")
     block content
 
+    script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
     // build:js scripts/vendor.js
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')
