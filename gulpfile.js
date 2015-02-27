@@ -51,6 +51,12 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('uploads', function () {
+  return gulp.src(require('main-bower-files')().concat('app/uploads/*'))
+    .pipe($.filter('**/*.{pdf,jpg,png,gif,jpeg}'))
+    .pipe(gulp.dest('dist/uploads'));
+});
+
 gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
@@ -122,7 +128,7 @@ gulp.task('watch', ['connect'], function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', [/*'jshint', */'html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', [/*'jshint', */'html', 'images', 'fonts', 'extras', 'uploads'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
