@@ -28,7 +28,7 @@
         margin-right: 76px;
         color: #25253f;
         &:hover {
-          text-decoration: underline;
+          border-bottom: 1px solid;
         }
         &.active {
           &:before {
