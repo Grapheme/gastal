@@ -33,8 +33,6 @@ html.no-js
         - var menu_obj = [{"n": "О гастале", "l": "about"},{"n": "Статьи", "l": "#"},{"n": "FAQ", "l": "faq"},{"n": "Контакты", "l": "contacts"}]
         each option in menu_obj
           a(href="#{option.l}.html" class = active == option.l ? "active":"") #{option.n}
-            - if(option.l == 'about')
-              | <sup>®</sup>
       .clrfx
   body(class="#{body}")
     block content
