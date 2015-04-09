@@ -127,3 +127,63 @@
         }
     }
 }
+
+.articles-page {
+    .articles-links {
+        position: relative;
+        left: -35px;
+
+        .link {
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-family: "helios";
+                color: #25253f;
+                font-size: 12px;
+                white-space: nowrap;
+                height: 35px;
+                line-height: 35px;
+                padding: 0 10px;
+                width: 106%;
+
+                &.active {
+                    text-decoration: none;
+                    background: #3db72f;
+                    color: #fff;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -10px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 17.5px 0 17.5px 10px;
+                        border-color: transparent transparent transparent #3db72f;
+                    }
+                }
+            }
+        }
+    }
+    .articles-text {
+        font-size: 14px;
+        margin-top: 25px;
+        padding-left: 10px;
+
+        .ptitle {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .bottom-desc {
+            font-size: 11px;
+            font-family: "helios";
+            color: #25253f;
+            vertical-align: super;
+            text-align: left;
+            margin-top: 30px;
+        }
+    }
+}

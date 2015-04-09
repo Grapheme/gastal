@@ -7,6 +7,23 @@ Gastal.faq = function() {
         $(this).find('.js-faq-answer').slideToggle();
     });
 }
+Gastal.articles = function() {
+    if(!$('.js-tab').length) return;
+    var show = function(id) {
+        $('.js-tab-link').eq(id).addClass('active')
+            .siblings().removeClass('active');
+        $('.js-tab').eq(id).show()
+            .siblings().hide();
+    }
+    var init = function() {
+        show(0);
+        $('.js-tab-link').on('click', function(){
+            show($(this).index());
+            return false;
+        });
+    }
+    init();
+}
 Gastal.map = function() {
     function initialize() {
         var mapOptions = {
@@ -32,4 +49,5 @@ Gastal.map = function() {
 $(function(){
     Gastal.faq();
     Gastal.map();
+    Gastal.articles();
 });
