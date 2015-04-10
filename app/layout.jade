@@ -30,7 +30,7 @@ html.no-js
       a.logo(href="index.html")
         img(src="images/logo-gastal-210.png")
       .holder
-        - var menu_obj = [{"n": "О гастале", "l": "about"},{"n": "Статьи", "l": "#"},{"n": "FAQ", "l": "faq"},{"n": "Контакты", "l": "contacts"}]
+        - var menu_obj = [{"n": "О гастале", "l": "about"},{"n": "Статьи", "l": "articles"},{"n": "FAQ", "l": "faq"},{"n": "Контакты", "l": "contacts"}]
         each option in menu_obj
           a(href="#{option.l}.html" class = active == option.l ? "active":"") #{option.n}
       .clrfx
