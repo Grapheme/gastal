@@ -27,7 +27,7 @@ Gastal.articles = function() {
 Gastal.map = function() {
     function initialize() {
         var mapOptions = {
-            center: new google.maps.LatLng(55.724054, 37.610413),
+            center: new google.maps.LatLng(55.729275, 37.626313),
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             zoomControl: false,
@@ -35,7 +35,7 @@ Gastal.map = function() {
             disableDoubleClickZoom: true
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var myLatlng = new google.maps.LatLng(55.724054, 37.610413);
+        var myLatlng = new google.maps.LatLng(55.729275, 37.626313);
         var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
